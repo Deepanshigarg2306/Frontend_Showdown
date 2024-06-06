@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    background-color: #1037fa;
+}
+footer{
+    position: relative;
+    width: 100%;
+    background-color: #3586ff;
+    min-height: 80px;
+    padding: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+footer .social-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .social-icon li{
+    list-style-type: none;
+}
+footer .social-icon li a{
+    font-size: 3em;
+    margin: 0 10px;
+    color: white;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social-icon li a{
+    width: 13%;
+}
+footer .social-icon li a:hover{
+    transform: translateY(-10px);
+}
+footer p,h2{
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index:1000;
+    opacity: 1;
+    bottom:0;
+    animation: animateWave 4s linear infinite;
+
+}
+footer .wave#wave2{
+    z-index:999;
+    opacity: 0.5;
+    bottom:10px;
+    animation: animateWave_02 4s linear infinite;
+
+}
+footer .wave#wave3{
+    z-index:1000;
+    opacity: 0.2;
+    bottom:15px;
+    animation: animateWave 3s linear infinite;
+
+}
+footer .wave#wave4{
+    z-index:999;
+    opacity: 0.7;
+    bottom:20px;
+    animation: animateWave_02 3s linear infinite;
+
+}
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    1000%{
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave__02{
+    0%{
+        background-position-x: 0px;
+    }
+    1000%{
+        background-position-x: 1000px;
+    }
+}
+ 
+ /*--------------media query------------------*/
+ @media only screen and (max-width:800px){
+     nav ul{
+         position: absolute;
+         top:40px;
+         left:0;
+         background: #333;
+         width: 100%;
+         overflow: hidden;
+        transition-duration: 0.5s;
+     }
+     nav ul li{
+         display: block;
+         margin-right: 50px;
+         margin-top: 10px;
+         margin-bottom: 10px;
+ 
+     }
+     nav ul li a{
+         color: #fff;
+     }
+     .menu-icon{
+         display: block;
+         cursor: pointer;
+     }
+ }
+ @media only screen and (max-width:600px){
+     .row{
+         text-align: center;
+     }
+     .col-2, .col-3, .col-4{
+         flex-basis: 100%;
+     }
+ }
+ 
+
+/*blog page*/
+#blog{
+    padding: 150px 150px 0 150px;
+}
+.logo img{
+    width: 10%;
+    border-radius: 100px;
+}
+
+#blog .blog-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+
+}
+#blog .blog-img{
+    width: 50%;
+    margin-right: 40px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor:pointer; 
+   
+}
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#blog .blog-details{
+    width: 50%;
+}
+#blog .blog-details a{
+    text-decoration: none;
+    font-size: 11px;
+    color:#000;
+    font-weight: 700;
+    position: relative;
+    transform: 0.3s;
+}
+#blog .blog-details a::after{
+    content: "";
+    width:50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+
+}
+#blog .blog-details h4,p{
+    margin-bottom: 15px;
+    color: white;
+    font-size: 16px;
+}
+#blog .blog-details a:hover{
+    color: #088178;
+}
+#blog .blog-details a:hover::after{
+    background-color: #088178;
+}
+#blog .blog-box h1{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 60px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -6;
+} 
+#pagination a{
+    text-align: center;
+    background-color: #f9612a;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+}
+#pagination {
+    text-align: center;
+
+}
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.blog-box .blog-img:hover{
+    transform: translateY(-10px);
+
+}
